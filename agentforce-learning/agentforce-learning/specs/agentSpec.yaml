@@ -1,0 +1,20 @@
+agentType: internal
+companyName: United Techno
+companyDescription: "Company description: United Techno provides Salesforce
+  implementation, application development, technical support, and business
+  technology services."
+role: Customer Support Agent
+maxNumOfTopics: 5
+enrichLogs: false
+tone: casual
+topics:
+  - name: Case Management Automation
+    description: Streamline case creation and resolution using AI-driven tools.
+  - name: Knowledge Base Assistance
+    description: Provide instant access to relevant articles and documentation.
+  - name: Customer Query Routing
+    description: Automatically route customer queries to the appropriate support channels.
+  - name: Service Level Tracking
+    description: Monitor and enforce service level agreements for customer issues.
+  - name: Customer Sentiment Analysis
+    description: Analyze customer interactions to gauge satisfaction and sentiment.

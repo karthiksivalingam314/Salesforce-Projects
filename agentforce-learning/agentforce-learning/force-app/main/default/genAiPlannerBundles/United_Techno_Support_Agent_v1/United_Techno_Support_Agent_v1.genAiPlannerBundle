@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Customer Support Agent</description>
+    <localTopicLinks>
+        <genAiPluginName>agent_router_16jfj00000395wP</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>ambiguous_question_16jfj00000395wP</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>case_management_automation_16jfj00000395wP</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>customer_query_routing_16jfj00000395wP</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>customer_sentiment_analysis_16jfj00000395wP</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>escalation_16jfj00000395wP</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>knowledge_base_assistance_16jfj00000395wP</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>off_topic_16jfj00000395wP</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>service_level_tracking_16jfj00000395wP</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>escalation_16jfj00000395wP</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles requests from users who want to transfer or escalate their conversation to a live human agent.</description>
+        <developerName>escalation_16jfj00000395wP</developerName>
+        <genAiPluginInstructions>
+            <description>You are a helpful and professional United Techno customer support AI agent. Help customers with supported Salesforce service requests, guide them clearly, and escalate to a human when necessary.</description>
+            <developerName>instruction0_179fj000004KYL5</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000004KYL5</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>escalation</localDeveloperName>
+        <masterLabel>Escalation</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>customer_query_routing_16jfj00000395wP</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Determine the appropriate support channel or team for customer requests.</description>
+        <developerName>customer_query_routing_16jfj00000395wP</developerName>
+        <genAiPluginInstructions>
+            <description>You are a helpful and professional United Techno customer support AI agent. Help customers with supported Salesforce service requests, guide them clearly, and escalate to a human when necessary.</description>
+            <developerName>instruction0_179fj000004KYL6</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000004KYL6</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>customer_query_routing</localDeveloperName>
+        <masterLabel>Customer Query Routing</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>case_management_automation_16jfj00000395wP</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Help customers with Salesforce support case requests.</description>
+        <developerName>case_management_automation_16jfj00000395wP</developerName>
+        <genAiPluginInstructions>
+            <description>You are a helpful and professional United Techno customer support AI agent. Help customers with supported Salesforce service requests, guide them clearly, and escalate to a human when necessary.</description>
+            <developerName>instruction0_179fj000004KYL3</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000004KYL3</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>case_management_automation</localDeveloperName>
+        <masterLabel>Case Management Automation</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>customer_sentiment_analysis_16jfj00000395wP</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Analyze customer interactions to understand the user&apos;s sentiment and urgency.</description>
+        <developerName>customer_sentiment_analysis_16jfj00000395wP</developerName>
+        <genAiPluginInstructions>
+            <description>You are a helpful and professional United Techno customer support AI agent. Help customers with supported Salesforce service requests, guide them clearly, and escalate to a human when necessary.</description>
+            <developerName>instruction0_179fj000004KYL4</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000004KYL4</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>customer_sentiment_analysis</localDeveloperName>
+        <masterLabel>Customer Sentiment Analysis</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>off_topic_16jfj00000395wP</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Redirect conversation to relevant topics when the user&apos;s request is outside the supported customer support scope.</description>
+        <developerName>off_topic_16jfj00000395wP</developerName>
+        <genAiPluginInstructions>
+            <description>You are a helpful and professional United Techno customer support AI agent. Help customers with supported Salesforce service requests, guide them clearly, and escalate to a human when necessary.</description>
+            <developerName>instruction0_179fj000004KYL7</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000004KYL7</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>off_topic</localDeveloperName>
+        <masterLabel>Off Topic</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>knowledge_base_assistance_16jfj00000395wP</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Provide customers with relevant support knowledge and documentation.</description>
+        <developerName>knowledge_base_assistance_16jfj00000395wP</developerName>
+        <genAiPluginInstructions>
+            <description>You are a helpful and professional United Techno customer support AI agent. Help customers with supported Salesforce service requests, guide them clearly, and escalate to a human when necessary.</description>
+            <developerName>instruction0_179fj000004KYKz</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000004KYKz</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>knowledge_base_assistance</localDeveloperName>
+        <masterLabel>Knowledge Base Assistance</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>service_level_tracking_16jfj00000395wP</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Help customers understand support case service levels, deadlines, and escalation status.</description>
+        <developerName>service_level_tracking_16jfj00000395wP</developerName>
+        <genAiPluginInstructions>
+            <description>You are a helpful and professional United Techno customer support AI agent. Help customers with supported Salesforce service requests, guide them clearly, and escalate to a human when necessary.</description>
+            <developerName>instruction0_179fj000004KYL1</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000004KYL1</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>service_level_tracking</localDeveloperName>
+        <masterLabel>Service Level Tracking</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>ambiguous_question_16jfj00000395wP</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Helps users provide clearer and more focused requests when their question is too ambiguous.</description>
+        <developerName>ambiguous_question_16jfj00000395wP</developerName>
+        <genAiPluginInstructions>
+            <description>You are a helpful and professional United Techno customer support AI agent. Help customers with supported Salesforce service requests, guide them clearly, and escalate to a human when necessary.</description>
+            <developerName>instruction0_179fj000004KYL2</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000004KYL2</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>ambiguous_question</localDeveloperName>
+        <masterLabel>Ambiguous Question</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>agent_router_16jfj00000395wP</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Welcome the user and determine the appropriate subagent based on user input.</description>
+        <developerName>agent_router_16jfj00000395wP</developerName>
+        <genAiPluginInstructions>
+            <description>You are a helpful and professional United Techno customer support AI agent. Help customers with supported Salesforce service requests, guide them clearly, and escalate to a human when necessary.</description>
+            <developerName>instruction0_179fj000004KYL0</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000004KYL0</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>agent_router</localDeveloperName>
+        <masterLabel>Agent Router</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <masterLabel>United Techno Support Agent</masterLabel>
+    <plannerType>Atlas__ConcurrentMultiAgentOrchestration</plannerType>
+</GenAiPlannerBundle>

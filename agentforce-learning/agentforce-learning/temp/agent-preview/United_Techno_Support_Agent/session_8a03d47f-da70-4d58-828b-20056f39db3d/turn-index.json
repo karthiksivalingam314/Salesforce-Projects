@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "sessionId": "8a03d47f-da70-4d58-828b-20056f39db3d",
+  "agentId": "United_Techno_Support_Agent",
+  "created": "2026-09-30T09:19:48.856Z",
+  "turns": [
+    {
+      "turn": 1,
+      "timestamp": "2026-09-30T09:19:48.856Z",
+      "role": "agent",
+      "summary": "Hi, I'm an AI assistant. How can I help you?",
+      "summaryTruncated": false,
+      "multiModal": null,
+      "traceFile": null,
+      "planId": null
+    },
+    {
+      "turn": 2,
+      "timestamp": "2026-09-30T09:20:43.669Z",
+      "role": "user",
+      "summary": "I want to check the status of my support case.",
+      "summaryTruncated": false,
+      "multiModal": null,
+      "traceFile": null,
+      "planId": null
+    },
+    {
+      "turn": 3,
+      "timestamp": "2026-09-30T09:20:46.797Z",
+      "role": "agent",
+      "summary": "To check the status of your support case, could you please provide your case number or any additiona...",
+      "summaryTruncated": true,
+      "multiModal": null,
+      "traceFile": "traces/fc44f037-96f4-4814-89a3-c3b79288b8b1.json",
+      "planId": "fc44f037-96f4-4814-89a3-c3b79288b8b1"
+    }
+  ]
+}
