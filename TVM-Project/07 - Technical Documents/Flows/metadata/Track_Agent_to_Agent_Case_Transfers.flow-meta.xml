@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>67.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Increment_From_Agent_Passed</name>
+        <label>Increment From Agent Passed</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>Get_From_Agent_Summary.Cases_Passed__c</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Save_From_Agent_Summary</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Increment_To_Agent_Received</name>
+        <label>Increment To Agent Received</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>Get_To_Agent_Summary.Cases_Received__c</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Save_To_Agent_Summary</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>From_Agent_Summary_Exists</name>
+        <label>From Agent Summary Exists?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Create_From_Agent_Summary</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Create Summary</defaultConnectorLabel>
+        <rules>
+            <name>Exists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_From_Agent_Summary.Agent__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Increment_From_Agent_Passed</targetReference>
+            </connector>
+            <label>Exists</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Agent_To_Agent_Transfer</name>
+        <label>Is Agent To Agent Transfer?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Previous_Owner.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Current_Owner.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Case_Transfer</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>To_Agent_Summary_Exists</name>
+        <label>To Agent Summary Exists?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Create_To_Agent_Summary</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Create Summary</defaultConnectorLabel>
+        <rules>
+            <name>Existss</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_To_Agent_Summary.Agent__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Increment_To_Agent_Received</targetReference>
+            </connector>
+            <label>Exists</label>
+        </rules>
+    </decisions>
+    <description>Tracks agent-to-agent Case owner transfers, creates Case Transfer records, and updates Agent Transfer Summary records to support reporting on Cases Passed, Cases Received, and Transfer Rate by month and year.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>CurrentMonth</name>
+        <dataType>String</dataType>
+        <expression>CASE(
+MONTH(DATEVALUE($Flow.CurrentDateTime)),
+1,&quot;January&quot;,
+2,&quot;February&quot;,
+3,&quot;March&quot;,
+4,&quot;April&quot;,
+5,&quot;May&quot;,
+6,&quot;June&quot;,
+7,&quot;July&quot;,
+8,&quot;August&quot;,
+9,&quot;September&quot;,
+10,&quot;October&quot;,
+11,&quot;November&quot;,
+12,&quot;December&quot;,
+&quot;&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>CurrentYear</name>
+        <dataType>Number</dataType>
+        <expression>YEAR(DATEVALUE($Flow.CurrentDateTime))</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>FromAgentSummaryKey</name>
+        <dataType>String</dataType>
+        <expression>{!Get_Previous_Owner.Id} &amp;
+&quot;-&quot; &amp;
+{!CurrentMonth} &amp;
+&quot;-&quot; &amp;
+TEXT({!CurrentYear})</expression>
+    </formulas>
+    <formulas>
+        <name>ToAgentSummaryKey</name>
+        <dataType>String</dataType>
+        <expression>{!Get_Current_Owner.Id}
+&amp;
+&quot;-&quot;
+&amp;
+{!CurrentMonth}
+&amp;
+&quot;-&quot;
+&amp;
+TEXT({!CurrentYear})</expression>
+    </formulas>
+    <interviewLabel>Track Agent-to-Agent Case Transfers {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Track Agent-to-Agent Case Transfers</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Case_Transfer</name>
+        <label>Create Case Transfer</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_From_Agent_Summary</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Case__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>From_Agent__c</field>
+            <value>
+                <elementReference>Get_Previous_Owner.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>To_Agent__c</field>
+            <value>
+                <elementReference>Get_Current_Owner.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Transfer_Date__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Transferred_By__c</field>
+            <value>
+                <elementReference>$Record.LastModifiedById</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case_Transfer__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_From_Agent_Summary</name>
+        <label>Create From Agent Summary</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_To_Agent_Summary</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Agent__c</field>
+            <value>
+                <elementReference>Get_Previous_Owner.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cases_Passed__c</field>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cases_Received__c</field>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Month__c</field>
+            <value>
+                <elementReference>CurrentMonth</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Summary_Key__c</field>
+            <value>
+                <elementReference>FromAgentSummaryKey</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Year__c</field>
+            <value>
+                <elementReference>CurrentYear</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Agent_Transfer_Summary__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_To_Agent_Summary</name>
+        <label>Create To Agent Summary</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Agent__c</field>
+            <value>
+                <elementReference>Get_Current_Owner.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cases_Passed__c</field>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cases_Received__c</field>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Month__c</field>
+            <value>
+                <elementReference>CurrentMonth</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Summary_Key__c</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Year__c</field>
+            <value>
+                <elementReference>CurrentYear</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Agent_Transfer_Summary__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Current_Owner</name>
+        <label>Get Current Owner</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_Agent_To_Agent_Transfer</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_From_Agent_Summary</name>
+        <label>Get From Agent Summary</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>From_Agent_Summary_Exists</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Agent__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Previous_Owner.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Month__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CurrentMonth</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Year__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CurrentYear</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Agent_Transfer_Summary__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Previous_Owner</name>
+        <label>Get Previous Owner</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Current_Owner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record__Prior.OwnerId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_To_Agent_Summary</name>
+        <label>Get To Agent Summary</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>To_Agent_Summary_Exists</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Agent__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Current_Owner.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Month__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CurrentMonth</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Year__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CurrentYear</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Agent_Transfer_Summary__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Save_From_Agent_Summary</name>
+        <label>Save From Agent Summary</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_To_Agent_Summary</targetReference>
+        </connector>
+        <inputReference>Get_From_Agent_Summary</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Save_To_Agent_Summary</name>
+        <label>Save To Agent Summary</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputReference>Get_To_Agent_Summary</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Previous_Owner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>OwnerId</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
