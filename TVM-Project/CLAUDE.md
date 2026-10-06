@@ -68,7 +68,7 @@ Rules:
 
 ## 5. Deployment documentation (permanent rule)
 
-The official deployment reference/template is **`06 - Deployment/TVM - Deployment Document.xlsx`**. Its structure and record template are summarised in [06 - Deployment/README.md](06%20-%20Deployment/README.md). The workbook is a reference only. It is **not** evidence that any deployment occurred in this project, and it must never be modified or turned into deployment records.
+The official deployment reference/template is **`06 - Deployment/TVM - Deployment Document.xlsx`**. Its structure and record template are summarised in [06 - Deployment/README.md](06%20-%20Deployment/README.md). Never modify the workbook. Its rows were extracted into **historical** records (`06 - Deployment/2026-10-06/DEP-2026-10-06-001` to `-039`; the folder date is the extraction date, because the workbook has no deployment dates). Historical records must stay faithful to the source: no inferred or corrected values, and `NOT PROVIDED` where the source is silent. Each deployment item gets its own DEP record.
 
 Whenever a task **actually involves a deployment or validation event** in Salesforce, do the following automatically, without asking the user:
 
