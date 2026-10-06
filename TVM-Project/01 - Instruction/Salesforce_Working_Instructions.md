@@ -72,10 +72,10 @@ For each piece of work, Claude records only facts that actually occurred, using 
 
 | Event | Record |
 |---|---|
-| New requirement | `Requirements/YYYY-MM-DD/REQ-YYYY-MM-DD-###.md` |
-| Implemented change | `Change Records/YYYY-MM-DD/CHG-YYYY-MM-DD-###.md` |
-| Meaningful failure | `Conflicts/YYYY-MM-DD/CON-YYYY-MM-DD-###.md` |
-| Deployment or validation | `Deployment/YYYY-MM-DD/DEP-YYYY-MM-DD-###.md` |
-| Technical change | `Technical Documents/<Category>/` |
+| New requirement | `03 - Requirements/YYYY-MM-DD/REQ-YYYY-MM-DD-###.md` |
+| Implemented change | `04 - Change Records/YYYY-MM-DD/CHG-YYYY-MM-DD-###.md` |
+| Meaningful failure | `05 - Conflicts/YYYY-MM-DD/CON-YYYY-MM-DD-###.md` |
+| Deployment or validation | `06 - Deployment/YYYY-MM-DD/DEP-YYYY-MM-DD-###.md` |
+| Technical change | `07 - Technical Documents/<Category>/` |
 
 Each folder's `README.md` contains the required template.

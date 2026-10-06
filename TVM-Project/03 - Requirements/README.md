@@ -5,7 +5,7 @@ Claude creates a requirement record automatically whenever the user gives a new 
 ## Structure
 
 ```
-Requirements/
+03 - Requirements/
 └── YYYY-MM-DD/
     └── REQ-YYYY-MM-DD-###.md
 ```

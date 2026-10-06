@@ -5,7 +5,7 @@ Claude creates a change record whenever it actually implements a change. Planned
 ## Structure
 
 ```
-Change Records/
+04 - Change Records/
 └── YYYY-MM-DD/
     └── CHG-YYYY-MM-DD-###.md
 ```

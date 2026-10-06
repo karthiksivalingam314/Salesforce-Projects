@@ -5,7 +5,7 @@ Claude creates a conflict record whenever implementation, testing, validation, d
 ## Structure
 
 ```
-Conflicts/
+05 - Conflicts/
 └── YYYY-MM-DD/
     └── CON-YYYY-MM-DD-###.md
 ```
