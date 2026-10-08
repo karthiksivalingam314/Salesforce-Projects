@@ -28,6 +28,10 @@ Why this org was identified as the TVM environment:
 - The username suffix is `.tvmprod.fullsando`.
 - It is the only authenticated org whose organization name is Team Velocity Marketing.
 
+## CLI default org
+
+On 2026-10-08, at the user's request, `Fullsandox` was set as the global Salesforce CLI default (`sf config set target-org=Fullsandox --global`; it was previously `agentforce-dev`). `TVM-Project/` has no `sfdx-project.json`, so a project-local default is not possible. Commands must still pass `--target-org "Fullsandox"` explicitly (rules 3 and 4 below).
+
 ## Mandatory rules before ANY Salesforce operation
 
 1. Verify the TVM working org.

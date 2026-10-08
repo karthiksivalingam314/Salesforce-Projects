@@ -24,7 +24,9 @@ TVM_WORKING_ORG = Fullsandox
 | Org name | Team Velocity Marketing |
 | Environment | Sandbox (`Organization.IsSandbox = true`), Unlimited Edition, instance `USA712S` |
 
-This is the only approved implementation target for TVM.
+This is the only approved implementation target for TVM. All TVM changes are made in this org.
+
+On 2026-10-08, at the user's request, `Fullsandox` was also set as the **global** Salesforce CLI default (`sf config set target-org=Fullsandox --global`). `TVM-Project/` is not a Salesforce DX project, so a project-local default is not possible. The default is a safety net only: the rules below still apply.
 
 ## 2. Mandatory org rules (before ANY Salesforce operation)
 
@@ -60,6 +62,7 @@ Use today's date (`YYYY-MM-DD`) for dated folders, and give IDs sequential numbe
 
 Rules:
 
+- **Every change is documented (permanent rule).** For every TVM request or change, Claude decides which of the folders above it belongs to and files the record there, under today's date. Claude does this without asking. One piece of work may need records in several folders (for example, a REQ, then a CHG, then technical docs).
 - **Requirements:** create the REQ record automatically as soon as a new requirement arrives, before implementation.
 - **Changes:** create a CHG record only for changes that were really made. Link it to its REQ.
 - **Conflicts:** never guess a root cause. If it is not verified, write `NOT VERIFIED`.
@@ -92,6 +95,8 @@ Constraints:
 - Production deployment remains human-controlled. Claude does not deploy to Production.
 
 ## 6. Git rules
+
+**Always push (permanent rule):** after every TVM documentation or change update, Claude commits the affected `TVM-Project/` files and pushes them to GitHub (`origin main`) in the same folder structure, without asking. Each piece of work gets its own commit with a message naming its REQ/CHG/DEP/CON ID.
 
 - Run `git status` and review `git diff` before staging, and confirm that only `TVM-Project/` files changed.
 - Stage files explicitly by path. Never use `git add .` or `git add -A`.
