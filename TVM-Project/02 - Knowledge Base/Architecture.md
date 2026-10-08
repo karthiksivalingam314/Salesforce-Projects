@@ -23,7 +23,14 @@ UNKNOWN
 
 ## Omni-Channel / routing
 
-UNKNOWN
+**VERIFIED** (source: Fullsandox metadata, 2026-10-08, REQ-2026-10-08-001)
+
+- Service channels: `Case` (Case), `sfdc_phone` (VoiceCall) and `sfdc_livemessage` (MessagingSession).
+- Cases are routed through 3 priority-based, skills-based routing configs (High/Medium/Low) and an overflow config for General Support. Skills come from the `Skill_based_rules_for_cases` rule set.
+- Voice uses Service Cloud Voice with Amazon Connect (call center `TVMSBCC`). 6 active voice routing flows send calls to Phone Support / FD Phone Support queues, or skills-based through `TVM_Voice_Routing_Config`. One active Case routing flow (`Case_General_Support_Router`) routes Cases to a queue that is passed in as an input.
+- Presence configuration `TVM_V1`: capacity 10.
+
+Details: [07 - Technical Documents/Omni-Channel/](../07%20-%20Technical%20Documents/Omni-Channel/README.md)
 
 ## Integrations
 

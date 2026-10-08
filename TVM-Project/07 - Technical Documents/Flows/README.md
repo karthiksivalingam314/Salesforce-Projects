@@ -22,6 +22,8 @@ Verified from Fullsandox on 2026-10-06 (REQ-2026-10-06-001). All six flows trigg
 | [Track Agent-to-Agent Case Transfers](Track_Agent_to_Agent_Case_Transfers.md) | `Track_Agent_to_Agent_Case_Transfers` | 2 | 2 (Active) | RecordAfterSave / Update | [Track_Agent_to_Agent_Case_Transfers.flow-meta.xml](metadata/Track_Agent_to_Agent_Case_Transfers.flow-meta.xml) |
 | [Track Internal Feedback Duration](Track_Internal_Feedback_Duration.md) | `Track_Internal_Feedback_Duration` | 3 | 10 (Obsolete) | RecordAfterSave / Update | [Track_Internal_Feedback_Duration-v3.active-metadata.json](metadata/Track_Internal_Feedback_Duration-v3.active-metadata.json) |
 
+Omni-Channel routing flows (process type `RoutingFlow`) are documented under [../Omni-Channel/Routing_Flows.md](../Omni-Channel/Routing_Flows.md).
+
 `metadata/` holds the active version of each flow:
 
 - `*.flow-meta.xml`: Metadata API XML, unmodified. Used only when the active version is also the latest.

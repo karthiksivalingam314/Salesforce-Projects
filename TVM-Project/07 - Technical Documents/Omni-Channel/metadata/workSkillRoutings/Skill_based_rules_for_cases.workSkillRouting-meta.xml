@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkSkillRouting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isActive>true</isActive>
+    <masterLabel>Skill based rules for cases</masterLabel>
+    <relatedEntity>Case</relatedEntity>
+    <workSkillRoutingAttributes>
+        <field>Case.Routing_Skill__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>General</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Routing_Skill__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Inventory</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Inventory Quantity Issue</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Feed Export Issue</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Inventory Grouping Issue</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Inventory Source Change</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>New HomeNet Feed/Order</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Vehicle Information Issue</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Vehicle Photos Issue</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>VDV Issue</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Key Features Issue</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Payment Disclaimer Issue</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Pricing/Payment Issue</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Pricing/Payments Update</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Taxes &amp; Fees Changes</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Taxes &amp; Fees Issues</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Unlock Price/Discount Issue</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Unlock Price/Discount Setup</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Transact Issue</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Transact Setup</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>VDV Setup</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Value Trade / Sell Us Your Car</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Service Scheduler iFrame Setup</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Service Scheduler Integration Setup</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Schedule Test Drive Setup</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Pre-Qual Setup</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Pre-Qual Issue</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Finance Application iFrame Setup</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Finance Application Integration Setup</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Finance Application Issue</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Inbound Text Setup</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Inbound Text Issue</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Apollo Assistant Issue</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Apollo Assistant Setup</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Rollbacks</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Payment Disclaimer Change</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Inventory Grouping Setup</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Feed Export Setup</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Custom Badges</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Meeting Request</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Launch Audits</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Update Defaults</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Payment Setup</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Payment/Rebate Issues</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Inventory Order Follow Up</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Inventory Tagging/Comments</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Request__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>My Credit Drive Login Setup</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Subcategory__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Account Settings</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Subcategory__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Apollo Platform Support</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Subcategory__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Command Center</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Subcategory__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>Inventory</skill>
+        <skillLevel>0</skillLevel>
+        <value>Rebates &amp; Incentives</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Subcategory__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Offers &amp; Specials</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Subcategory__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Websites - 3rd Party</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Subcategory__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Websites - Content</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Subcategory__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>0</skillLevel>
+        <value>Websites - Leads &amp; Forms</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.Case_Subcategory__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>General</skill>
+        <skillLevel>4</skillLevel>
+        <value>Buy Sell</value>
+    </workSkillRoutingAttributes>
+</WorkSkillRouting>
